@@ -6,6 +6,9 @@ import {TransferCountFilter} from 'Flights/Components/TransferCountFilter';
 import {IFlight} from 'Flights/Models';
 import {Service} from 'Flights/Service';
 
+/**
+ * @param store - mobX-state-tree хранилище
+ */
 interface IProps {
     store: any;
 }
@@ -19,10 +22,10 @@ const App: React.FC<IProps> = ({store}: IProps) => {
         store.setLoading(true);
         Service.loadFlightVariations()
             .then((flights: IFlight[]) => {
-                store?.setFlights(flights);
+                store.setFlights(flights);
             })
             .finally(() => {
-                store?.setLoading(false);
+                store.setLoading(false);
             });
     };
 
