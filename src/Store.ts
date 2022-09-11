@@ -35,16 +35,15 @@ const RootStore = types
         return {
             getFlightsResult(): IFlight[] {
                 const snapshot = getSnapshot(self);
-                // @ts-ignore
-                const restFlights = filterFlights(snapshot.flights, snapshot.transferFilter);
+                const restFlights = filterFlights(snapshot.flights, snapshot.transferFilter as EFilterFlightType[]);
 
-                // @ts-ignore
-                return sortFlights(restFlights, snapshot.sort);
+                return sortFlights(restFlights, snapshot.sort as ESortType);
             },
         };
     })
     .actions((self) => ({
         setFlights(flights: IFlight[]) {
+            // @ts-ignore
             self.flights = flights.map((flight) => Flight.create(flight));
         },
         setLoading(value: boolean) {
@@ -54,6 +53,7 @@ const RootStore = types
             self.sort = newSort;
         },
         setTransferFilter(newFilter: EFilterFlightType[]) {
+            // @ts-ignore
             self.transferFilter = newFilter;
         },
     }));

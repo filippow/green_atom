@@ -1,0 +1,8 @@
+{
+    "bundleDirectory": "../out",
+    "proxyTarget": "https://yandex.ru",
+    "port": 8888,
+    "delay": 500,
+    "mockEnable": true,
+    "mockRoutes": []
+}
