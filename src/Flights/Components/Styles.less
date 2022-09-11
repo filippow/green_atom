@@ -1,0 +1,82 @@
+@blue-color: #2196f3;
+@primary-text-color: #4d4d4d;
+@secondary-text-color: #b6c2ca;
+
+.appContainer {
+    padding-top: 100px;
+    color: @primary-text-color;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    background-color: #f3f7fa;
+}
+
+.searchTable {
+    width: 600px;
+}
+
+.transferFilter {
+    width: 300px;
+    margin-right: 30px;
+}
+
+.pageCard {
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: white;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardPrice {
+    color: @blue-color;
+    font-size: 22px;
+}
+
+.cardPath {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardPathSecondaryText {
+    color: @secondary-text-color;
+}
+
+.fillerItemText {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.sortButtonsContainer {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.sortButton {
+    flex: 1;
+    height: 40px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    //border: 1px 1px 1px 1px solid @secondary-text-color;
+}
+
+.sortButton:first-of-type {
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.sortButton:last-of-type {
+    border-left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.sortButtonActive {
+    background: @blue-color;
+    color: white;
+}
