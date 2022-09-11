@@ -1,0 +1,5 @@
+/node_modules
+/stats.json
+/out
+.idea/
+__pycache__/
